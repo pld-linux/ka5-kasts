@@ -8,7 +8,7 @@
 Summary:	kasts
 Name:		ka5-%{kaname}
 Version:	23.08.0
-Release:	1
+Release:	2
 License:	BSD 2 Clause/BSD 3 Clause/GPL v2+/GPL v3+/LGPL v2.0+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
@@ -82,8 +82,11 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/kasts
 %attr(755,root,root) %{_libdir}/libKMediaSession.so
 %attr(755,root,root) %{_libdir}/libKastsSolidExtras.so
+%dir %{_libdir}/qt5/qml/org/kde/kasts
+%dir %{_libdir}/qt5/qml/org/kde/kasts/solidextras
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/kasts/solidextras/libkasts-solidextrasqmlplugin.so
 %{_libdir}/qt5/qml/org/kde/kasts/solidextras/qmldir
+%dir %{_libdir}/qt5/qml/org/kde/kmediasession
 %attr(755,root,root) %{_libdir}/qt5/qml/org/kde/kmediasession/libkmediasession-qmlplugin.so
 %{_libdir}/qt5/qml/org/kde/kmediasession/qmldir
 %{_desktopdir}/org.kde.kasts.desktop
