@@ -34,9 +34,9 @@ BuildRequires:	kf5-kconfig-devel >= 5.102.0
 BuildRequires:	kf5-kcoreaddons-devel >= 5.102.0
 BuildRequires:	kf5-ki18n-devel >= 5.102.0
 BuildRequires:	kf5-kirigami2-devel >= 5.102.0
+BuildRequires:	kf5-kirigami-addons-devel >= 0.7
 BuildRequires:	kf5-syndication-devel >= 5.102.0
 BuildRequires:	kf5-threadweaver-devel >= 5.102.0
-BuildRequires:	kirigami-addons-devel >= 0.7
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	qt5-build >= %{qtver}
