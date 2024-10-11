@@ -5,7 +5,8 @@
 %define		kframever	5.94.0
 %define		qtver		5.15.2
 %define		kaname		kasts
-Summary:	kasts
+Summary:	Convergent podcasts application
+Summary(pl.UTF-8):	Dostosowująca się aplikacja do podkastów
 Name:		ka5-%{kaname}
 Version:	23.08.5
 Release:	1
@@ -13,7 +14,7 @@ License:	BSD 2 Clause/BSD 3 Clause/GPL v2+/GPL v3+/LGPL v2.0+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
 # Source0-md5:	0479406530e106b3021f6dae6b5d8e5a
-URL:		http://www.kde.org/
+URL:		https://apps.kde.org/kasts/
 BuildRequires:	Qt5Core-devel
 BuildRequires:	Qt5DBus-devel
 BuildRequires:	Qt5Gui-devel
@@ -51,6 +52,9 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Kasts is a convergent podcast application.
 
+%description -l pl.UTF-8
+Kasts to dostosowująca się aplikacja do podkastów.
+
 %prep
 %setup -q -n %{kaname}-%{version}
 
@@ -61,15 +65,16 @@ Kasts is a convergent podcast application.
 	%{!?with_tests:-DBUILD_TESTING=OFF} \
 	-DHTML_INSTALL_DIR=%{_kdedocdir} \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS=ON
+
 %ninja_build -C build
 
 %if %{with tests}
 ctest --test-dir build
 %endif
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
+
 %ninja_install -C build
 
 %find_lang %{kaname} --all-name --with-kde
