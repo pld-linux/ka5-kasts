@@ -41,7 +41,7 @@ BuildRequires:	kf5-threadweaver-devel >= 5.102.0
 BuildRequires:	ninja
 BuildRequires:	pkgconfig
 BuildRequires:	qt5-build >= %{qtver}
-BuildRequires:	rpmbuild(macros) >= 1.164
+BuildRequires:	rpmbuild(macros) >= 1.736
 BuildRequires:	shared-mime-info
 BuildRequires:	taglib-devel
 BuildRequires:	tar >= 1:1.22
