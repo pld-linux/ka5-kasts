@@ -9,7 +9,7 @@ Summary:	Convergent podcasts application
 Summary(pl.UTF-8):	Dostosowująca się aplikacja do podkastów
 Name:		ka5-%{kaname}
 Version:	23.08.5
-Release:	2
+Release:	3
 License:	BSD 2 Clause/BSD 3 Clause/GPL v2+/GPL v3+/LGPL v2.0+
 Group:		X11/Applications
 Source0:	https://download.kde.org/stable/release-service/%{kdeappsver}/src/%{kaname}-%{version}.tar.xz
